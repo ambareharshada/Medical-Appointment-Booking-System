@@ -1,0 +1,238 @@
+/* App.css */
+.navbar-custom {
+  /* background-color: #3aafa9;  */
+  background-color: white; /* Soft teal color */
+  color: rgb(14, 1, 1);
+  box-sizing: border-box;
+}
+
+/* .navbar-custom .navbar-brand, */
+.navbar-custom .nav-link {
+  color: #033b39 !important;
+}
+.navbar-custom .navbar-brand{
+  color:#2b7a78;
+}
+.navbar-custom .nav-link:hover {
+  color: #3aafa9 !important;
+  /* color: #d9e9e8 !important; */
+   /* Slightly lighter teal for hover effect */
+}
+
+/* Additional styling for the form card */
+.card {
+  border: none;
+  border-radius: 10px;
+}
+
+.card-title {
+  color: #2b7a78 !important; /* Darker teal for titles */
+}
+
+.btn-button {
+  background-color: #2b7a78 !important;
+  border-color: #2b7a78 !important;
+}
+
+.btn-button:hover {
+  background-color: #3aafa9;
+  border-color: #3aafa9;
+}
+.link-a{
+  color:#2b7a78;
+}
+.link-a:hover{
+  color:#3aafa9;
+}
+/*  */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* CSS for left nav  */
+* {
+  box-sizing: border-box; 
+ }
+ body {
+   margin: 0;
+ }
+ #main {
+   display: flex;
+   /* background-image:url('../public/images/health-doctors.jpg');
+    height: "100vh"; */
+    margin-top: "-70px";
+    font-size: "50px";
+    background-position: 100% 100%;
+    background-size: cover;
+    background-repeat: "no-repeat",;
+   background-image: url("../src/assets/healthcare1.png");
+   min-height: calc(100vh - 10vh);
+ }
+ #main > article {
+   flex: 1;
+ }
+ #main > nav, 
+ #main > aside {
+   flex: 0 0 20vw;
+   background: beige;
+ }
+ #main > nav {
+   order: -1;
+ }
+ article, nav {
+   padding: 1em;
+ }
+
+
+
+
+/*  */
+.left-nav {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: #6bb3a7;
+  color: white;
+  overflow: auto;
+  transition: left 0.3s;
+  z-index: 999;
+}
+
+.left-nav.visible {
+  left: 0;
+}
+
+.left-nav nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.left-nav nav ul li {
+  padding: 15px;
+  /* border-bottom: 1px solid #495057; */
+}
+
+.left-nav nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.left-nav nav ul li a:hover {
+  color: #2b7a78 !important;
+  display: block;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  .left-nav {
+    width: 200px;
+    left: -200px;
+  }
+
+  .left-nav.visible {
+    left: 0;
+  }
+}
+/*  */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.App {
+  display: flex;
+  height: 100%;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #6bb3a7;
+  color: white;
+  /* padding: 10px; */
+  text-align: left;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-toggle {
+  background-color: white;
+  border: none;
+  color: #2b7a78 !important;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#main {
+  margin-top: 50px;
+  flex-grow: 1;
+  display: flex;
+}
+
+article {
+  flex-grow: 1;
+  padding: 20px;
+  transition: margin-left 0.3s;
+}
+
+.left-nav.visible ~ #main article {
+  margin-left: 250px;
+}
+
+@media (max-width: 768px) {
+  .left-nav {
+    width: 200px;
+    left: -200px;
+  }
+
+  .left-nav.visible ~ #main article {
+    margin-left: 200px;
+  }
+}
